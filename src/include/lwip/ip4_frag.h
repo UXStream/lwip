@@ -53,7 +53,9 @@ extern "C" {
 
 #if IP_REASSEMBLY
 /* The IP reassembly timer interval in milliseconds. */
+#ifndef IP_TMR_INTERVAL
 #define IP_TMR_INTERVAL 1000
+#endif
 
 /** IP reassembly helper struct.
  * This is exported because memp needs to know the size.
